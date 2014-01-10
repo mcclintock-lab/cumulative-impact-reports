@@ -1,10 +1,10 @@
 
 <div class="reportSection tableContainer">
   <h4>Cumulative Impact</h4>
-  <table data-paging="10"> <!-- data-paging... activates paging  -->
+  <table>
     <thead>
       <tr>
-        <th>Mean</th>
+        <th >Mean</th>
         <th>Standard Deviation</th>
         <th>Minimum</th>
         <th>Maximum</th>
@@ -13,13 +13,19 @@
     <tbody>
       {{#cumulativeImpact}}
       <tr>
-        <td>{{MEAN}}</td>
+        <td style="text-align:center;">{{MEAN}}</td>
         <td>{{STD}}</td>
         <td>{{MIN}}</td>
         <td>{{MAX}}</td>
       </tr>
       {{/cumulativeImpact}}
-    </tbody>
+      <tfoot>
+        <tr>
+          <td colspan=4>
+           <a href="http://www.nceas.ucsb.edu/globalmarine" target="_blank">Learn more about cumulative impacts</a>
+          </td>
+      </tfoot>
 
+    </tbody>
   </table>
 </div>
