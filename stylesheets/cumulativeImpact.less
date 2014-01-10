@@ -1,0 +1,71 @@
+@import '../node_modules/seasketch-reporting-api/stylesheets/common.less';
+
+.overview {
+  .viz > div.range {
+    height:15px;
+    float:left;
+    border-top:1px solid rgba(0,0,0,0.1);
+
+    &.below {
+      @bg:#e5cace;
+      background:@bg;
+      #gradient > .vertical(darken(@bg, 5%), @bg);
+    }
+
+    &.recommended {
+      @bg:#9aba8c; 
+      background:@bg;
+      #gradient > .vertical(darken(@bg, 10%), @bg);
+    }
+
+    &.above {
+      @bg:#b3cfa7;
+      background:@bg;
+      #gradient > .vertical(darken(@bg, 10%), @bg);
+
+    }
+
+    > span {
+      position:absolute;
+      top:18px;
+      font-size:11px;
+
+      span {
+        font-size:10px;
+        display:block;
+        color:#888;
+        margin-top:-3px;
+      }
+    }
+  }
+
+  .viz {
+  	position:relative;
+    .clearfix();
+    margin-bottom:50px;
+    margin-left:20px;
+    margin-top:20px;
+
+    .measure {
+      position:absolute;
+      top:-20px;
+      background:transparent;
+      float:none;
+      line-height:20px;
+      padding-left:14px;
+      text-shadow:1px 1px 1px rgba(0,0,0,0.2);
+
+      &:before {
+        font-family:'fontello';
+        content: '▾';
+        margin-right:5px;
+        font-size:28px;
+        position:absolute;
+        top:3px;
+        left:-8px;
+        color:#4d4d4d;
+      }
+    }
+
+  }
+}

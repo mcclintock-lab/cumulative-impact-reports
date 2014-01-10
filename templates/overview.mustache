@@ -1,0 +1,26 @@
+
+<div class="reportSection tableContainer">
+  <h4>Cumulative Impact</h4>
+  <table data-paging="10"> <!-- data-paging... activates paging  -->
+    <thead>
+      <tr>
+        <th>Mean</th>
+        <th>Standard Deviation</th>
+        <th>Minimum</th>
+        <th >Maximum</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#cumulativeImpact}}
+      <tr>
+        <td>{{MEAN}}</td>
+        <td>{{STD}}</td>
+        <td>{{MIN}}</td>
+        <td>{{MAX}}</td>
+
+      </tr>
+      {{/cumulativeImpact}}
+    </tbody>
+
+  </table>
+</div>

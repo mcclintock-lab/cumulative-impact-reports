@@ -1,5 +1,4 @@
 module.exports = (grunt) ->
-
   # Project configuration.
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
@@ -50,17 +49,18 @@ module.exports = (grunt) ->
     less:
       report:
         files:
-          'dist/report.css': 'stylesheets/report.less'
+          'dist/cumulativeImpact.css': 'stylesheets/cumulativeImpact.less'
     browserify:
-      report:
-        src: 'scripts/report.coffee'
-        dest: 'dist/report.js'
+      cumulativeImpact:
+        src: 'scripts/cumulativeImpact.coffee'
+        dest: 'dist/cumulativeImpact.js'
       options:
         transform: ['coffeeify']
         debug: true
         alias: [
           'node_modules/seasketch-reporting-api/scripts/reportTab.coffee:reportTab'
         ]
+        ignore: ['views/collectionView']
 
   grunt.loadNpmTasks('grunt-contrib-connect')
   grunt.loadNpmTasks('grunt-contrib-watch')
