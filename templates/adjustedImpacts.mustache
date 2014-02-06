@@ -1,0 +1,41 @@
+{{#hasAdjustedCumulativeImpacts}}
+<div class="reportSection tableContainer">
+  <h4>Adjusted Cumulative Impact</h4>
+  <table>
+    <thead>
+      <tr>
+        <th >Mean</th>
+        <th>Standard Deviation</th>
+        <th>Minimum</th>
+        <th>Maximum</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#adjustedCumulativeImpact}}
+      <tr>
+        <td style="text-align:center;">{{MEAN}}</td>
+        <td>{{STD}}</td>
+        <td>{{MIN}}</td>
+        <td>{{MAX}}</td>
+      </tr>
+      {{/adjustedCumulativeImpact}}
+      <tfoot>
+        <tr>
+          <td colspan=4>
+           <a href="http://www.nceas.ucsb.edu/globalmarine" target="_blank">Learn more about cumulative impacts</a>
+          </td>
+      </tfoot>
+
+    </tbody>
+  </table>
+</div>
+{{/hasAdjustedCumulativeImpacts}}
+
+{{^hasAdjustedCumulativeImpacts}}
+  <div class="reportSection">
+    <h4>Adjusted Cumulative Impact</h4>
+    <p class="large">
+      To calculate the adjusted cumulative impact score, please edit the marine management area, choose 'Adjust Impact Severity', choose the impacts that you want to modify, then re-run the report.
+    </p>
+  </div>
+{{/hasAdjustedCumulativeImpacts}}

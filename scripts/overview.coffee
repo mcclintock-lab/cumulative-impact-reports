@@ -4,7 +4,7 @@ templates = require '../templates/templates.js'
 
 
 class OverviewTab extends ReportTab
-  name: 'Overview'
+  name: 'Existing Cumulative Impact'
   className: 'overview'
   timeout: 120000
   template: templates.overview
@@ -14,7 +14,6 @@ class OverviewTab extends ReportTab
     isCollection = @model.isCollection()
     cumulativeImpact = @recordSet('CumulativeImpact', 'CumulativeImpact').toArray()
 
-    console.log("here!!!!", cumulativeImpact)
     # setup context object with data and render the template from it
     context =
       sketch: @model.forTemplate()
