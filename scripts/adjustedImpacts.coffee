@@ -4,10 +4,10 @@ templates = require '../templates/templates.js'
 
 
 class AdjustedImpactsTab extends ReportTab
-  name: 'AdjustedImpactsTab'
+  name: 'Adjusted Impacts'
   className: 'adjustedImpactsTab'
   timeout: 240000
-  template: templates.adjustedImpacts
+  template: templates.adjustedImpacts 
   dependencies: ['AdjustedCumulativeImpact']
 
   render: () ->
