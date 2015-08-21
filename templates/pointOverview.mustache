@@ -1,17 +1,30 @@
+
+
 <div class="reportSection tableContainer">
   <h4>Scores at Point</h4>
+  <p><em>The total score for the point is <b>{{total_score}}</b></em></p>
   <table>
     <thead>
       <tr>
-
+        <th>Stressor</th>
+        <th>Habitat</th>
+        <th>Weighted Score</th>
+        <th>Total Stressor Score</th>
       </tr>
     </thead>
     <tbody>
-      {{#scores}}
+      {{#split_scores}}
       <tr>
-
+        {{#first}}
+          <td rowspan="{{NUM_STRESSORS}}">{{SNAME}}</td>
+        {{/first}}
+        <td style="text-align:left;">{{HNAME}}</td>
+        <td>{{SCORE}}</td>
+        {{#first}}
+          <td rowspan="{{NUM_STRESSORS}}">{{STRESSOR_SCORE}}</td>
+        {{/first}}
       </tr>
-      {{/scores}}
+      {{/split_scores}}
 
     </tbody>
   </table>
