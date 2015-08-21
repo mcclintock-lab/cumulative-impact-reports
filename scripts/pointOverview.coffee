@@ -50,6 +50,7 @@ class PointOverviewTab extends ReportTab
     for key in keys
       total_score+=Number(stressor_scores[key])
 
+    total_score = Number(total_score).toFixed(2)
     # setup context object with data and render the template from it
     context =
       sketch: @model.forTemplate()
