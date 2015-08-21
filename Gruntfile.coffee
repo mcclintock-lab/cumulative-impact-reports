@@ -54,6 +54,9 @@ module.exports = (grunt) ->
       cumulativeImpact:
         src: 'scripts/cumulativeImpact.coffee'
         dest: 'dist/cumulativeImpact.js'
+      pointCumulativeImpact:
+        src: 'scripts/pointCumulativeImpact.coffee'
+        dest: 'dist/pointCumulativeImpact.js'
       options:
         transform: ['coffeeify']
         debug: true
