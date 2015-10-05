@@ -19,7 +19,7 @@ class PointOverviewTab extends ReportTab
 
     found_stressors = {}
     stressor_scores = {}
-
+    max_score = 25.2
     for score in split_scores
       score.SNAME = stressor_names[score.STRESS]
       score.HNAME = habitat_names[score.HAB]
@@ -59,6 +59,7 @@ class PointOverviewTab extends ReportTab
       admin: @project.isAdmin window.user
       split_scores: split_scores
       total_score: total_score
+      max_score: max_score
 
     @$el.html @template.render(context, templates)
 
